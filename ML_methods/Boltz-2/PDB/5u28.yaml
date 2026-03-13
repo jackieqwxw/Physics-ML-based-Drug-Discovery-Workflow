@@ -1,0 +1,12 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: "ANPPPPETSNPNKPKRQTNQLQYLLRVVLKTLWKHQFAWPFQQPVDAVKLNLPDYYKIIKTPMDMGTIKKRLENNYYWNAQECIQDFNTMFTNCYIYNKPGDDIVLMAEALEKLFLQKINELPTEETEIMIVQAKGRG"
+  - ligand:
+      id: L
+      smiles: "O=c1cc(N2CCOCC2)oc2c(-c3ccc4c(c3)OCCO4)csc12"
+
+properties:
+  - affinity:
+      binder: L
