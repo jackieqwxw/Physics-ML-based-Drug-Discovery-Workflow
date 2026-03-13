@@ -82,12 +82,23 @@ Typical organization:
 Boltz-2
 
 ├── README.md/
-├── run_boltz2_loop.sh/
-├── yaml_inputs/
-│   ├── complex_001.yaml
-│   ├── complex_002.yaml
+├── RunBDB.sh/
+├── RunDUD-E.sh/
+├── DUD-E/
+│   ├── 3bz3_1.yaml
+│   ├── 3bz3_2.yaml
+│   └── ...
+├── PDB/
+│   ├── 1c5x.yaml
+│   ├── 1cet.yaml
+│   ├── 1d3d.yaml
+│   ├── 1d3p.yaml
 │   └── ...
 ├── outputs/
+│   ├── boltz_results_1c5x.yaml
+│   ├── boltz_results_1cet.yaml
+│   ├── boltz_results_1d3d.yaml
+│   └── ...
 └── logs/
 ```
 
