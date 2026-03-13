@@ -110,6 +110,7 @@ Example structure:
 
 proteinpath,ligandpath
 ./ACE/protein.pdb,./ACE/ligand1.sdf
+
 ./ACE/protein.pdb,./ACE/ligand2.sdf
 
 ---
@@ -122,6 +123,7 @@ These files are not included in this repository due to GitHub size limits.
 They can be obtained from the original OnionNet-2 repository:
 
 https://zenodo.org/records/10728089/62shell_saved-model.h5
+
 https://github.com/zchwang/OnionNet-2/tree/master/models/train_scaler.scaler
 
 ---
@@ -178,12 +180,12 @@ To process all complexes in the dataset automatically, we used a loop script:
 
 ```bash
 run_onionnet2_loop.sh
+```
 
 This script:
 
 Reads index.csv
 
-```
 Iterates over each protein-ligand pair
 
 Runs OnionNet-2 predictions
@@ -201,7 +203,9 @@ Example output:
 
 proteinpath,ligandpath,prediction
 ./ACE/protein.pdb,./ACE/lig1.sdf,-9.21
+
 ./ACE/protein.pdb,./ACE/lig2.sdf,-7.55
+
 ./ACE/protein.pdb,./ACE/lig3.sdf,-8.04
 
 This output file preserves the original dataset index and adds a column containing the predicted binding affinity.
@@ -213,10 +217,15 @@ Typical contents of this folder include:
 
 OnionNet-2/
 ├── README.md
+
 ├── run_onionnet2_loop.sh
+
 ├── run_onionnet2_predictions.py
+
 ├── PDB database/
+
 ├── DUD-E/
+
 └── model/
 
 ---
