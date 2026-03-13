@@ -184,13 +184,13 @@ run_onionnet2_loop.sh
 
 This script:
 
-Reads index.csv
+    Reads index.csv
 
-Iterates over each protein-ligand pair
+    Iterates over each protein-ligand pair
 
-Runs OnionNet-2 predictions
+    Runs OnionNet-2 predictions
 
-Collects predicted values
+    Collects predicted values
 
 ---
 ##  Output Format
@@ -202,6 +202,7 @@ onionnet2_predictions.csv
 Example output:
 
 proteinpath,ligandpath,prediction
+
 ./ACE/protein.pdb,./ACE/lig1.sdf,-9.21
 
 ./ACE/protein.pdb,./ACE/lig2.sdf,-7.55
@@ -214,7 +215,7 @@ This output file preserves the original dataset index and adds a column containi
 ##  Files in this Directory
 
 Typical contents of this folder include:
-
+```text
 OnionNet-2/
 ├── README.md
 ├── run_onionnet2_loop.sh
@@ -226,6 +227,7 @@ OnionNet-2/
 └── model/
     ├── model.h5
     └── scaler.save└── model/
+```
 
 ---
 ##  Reproducibility Notes
