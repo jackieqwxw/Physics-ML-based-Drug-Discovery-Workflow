@@ -1,0 +1,12 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: "DFEEIPEEYL"
+  - ligand:
+      id: L
+      smiles: "FC(F)(CNc1nccc2oc(Cc3ccccc3-n3cncn3)nc12)[C@H]1CCCC[NH2+]1"
+
+properties:
+  - affinity:
+      binder: L

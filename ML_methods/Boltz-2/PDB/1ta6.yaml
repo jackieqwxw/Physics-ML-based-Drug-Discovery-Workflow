@@ -1,0 +1,12 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: "DFEEIPEAYLA"
+  - ligand:
+      id: L
+      smiles: "CCNC(=O)COc1ccc(Cl)cc1CNC(=O)[C@@H]1CCCN1C(=O)[C@H]([NH3+])C1CCCCC1"
+
+properties:
+  - affinity:
+      binder: L
