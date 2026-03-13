@@ -1,18 +1,18 @@
 ## Boltz-2
 
-\# Boltz-2 Benchmark Workflow
+# Boltz-2 Benchmark Workflow
 
 This directory documents the workflow used to run \*\*Boltz-2\*\* for the machine learning benchmark described in the manuscript:
 
-\*\*“The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.”\*\*
+*“The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.”
 
 The purpose of this folder is to provide a reproducible workflow for generating Boltz-2 binding affinity predictions on the benchmark datasets used in this study.
 
-\---
+---
 
 
 
-\## Method Overview
+## Method Overview
 
 
 
@@ -24,11 +24,11 @@ In this benchmark study, Boltz-2 was used as an additional machine learning affi
 
 
 
-\---
+---
 
 
 
-\## Original Repository
+## Original Repository
 
 
 
@@ -44,7 +44,7 @@ https://github.com/jwohlwend/boltz
 
 
 
-\---
+---
 
 
 
@@ -64,9 +64,9 @@ where input\_path can be a single YAML file or a directory of YAML files for bat
 
 
 
-\---
+---
 
-\## Installation
+## Installation
 
 
 
@@ -103,7 +103,7 @@ For CPU-only or non-CUDA systems, the repository notes that \[cuda] should be re
 
 
 
-\## HPC Execution
+## HPC Execution
 
 
 
@@ -127,11 +127,11 @@ This setup allowed automated execution across the benchmark dataset.
 
 
 
-\---
+---
 
 
 
-\## Input Preparation
+## Input Preparation
 
 
 
@@ -171,7 +171,7 @@ Boltz-2/
 
 
 
-\## Prediction Command
+## Prediction Command
 
 
 
@@ -305,7 +305,7 @@ Large output files are not included directly in this repository unless they are 
 
 
 
-\##  Citation
+##  Citation
 
 
 
