@@ -59,8 +59,8 @@ Create and activate a conda environment:
 ```bash
 conda create -n onionnet2 python=3.8
 conda activate onionnet2
-
-
+```
+```bash
 Install required packages:
 pip install tensorflow==2.3
 pip install pandas==1.3.4
@@ -68,53 +68,51 @@ pip install scikit-learn==0.22.1
 pip install joblib==1.0.1
 pip install numpy==1.18.5
 pip install scipy==1.4.1
-
+```
+```bash
 Clone the original OnionNet-2 repository:
 git clone https://github.com/zchwang/OnionNet-2
 
 ```
+---
 
 ##  Input Preparation
 
 Protein and ligand structures were prepared prior to running OnionNet-2.
 
-Protein Preparation
+- **Protein Preparation  **  Proteins were prepared by:
 
-Proteins were prepared by:
+- Removing bound ligands
 
-Removing bound ligands
+- Adding hydrogen atoms
 
-Adding hydrogen atoms
+- Saving the resulting structures in PDB format
 
-Saving the resulting structures in PDB format
+- OpenBabel was used for these steps.
 
-OpenBabel was used for these steps.
+- ** Ligand Preparation **  Ligands were prepared by:
 
-Ligand Preparation
+- Generating 3D coordinates
 
-Ligands were prepared by:
+- Adding hydrogen atoms
 
-Generating 3D coordinates
-
-Adding hydrogen atoms
-
-Saving the structures in SDF format
+- Saving the structures in SDF format
 
 These prepared protein and ligand structures were then used as inputs for OnionNet-2 predictions.
 
 Dataset Structure
 
-The dataset used for prediction is indexed using a CSV file:
+- The dataset used for prediction is indexed using a CSV file:   dataset/PDB/index.csv
 
-dataset/DUD-E/index.csv
-
-This file contains paths to protein and ligand structures.
+- This file contains paths to protein and ligand structures.
 
 Example structure:
 
 proteinpath,ligandpath
 ./ACE/protein.pdb,./ACE/ligand1.sdf
 ./ACE/protein.pdb,./ACE/ligand2.sdf
+
+---
 ##  Prediction Workflow
 
 Predictions were generated using the predict.py script provided in the original OnionNet-2 repository.
@@ -123,18 +121,18 @@ To automate prediction across the entire dataset, a batch script was used to ite
 
 Each iteration performs the following steps:
 
-Read protein and ligand paths from the dataset index
+-  Read protein and ligand paths from the dataset index
 
-Construct absolute paths to input files
+-  Construct absolute paths to input files
 
-Run OnionNet-2 prediction
+-  Run OnionNet-2 prediction
 
 Store the predicted binding affinity
-
+---
 ##  Example Prediction Command
 
 The OnionNet-2 prediction script is executed as follows:
-
+```bash
 python predict.py \
 -rec_fpath protein.pdb \
 -lig_fpath ligand.sdf \
@@ -143,39 +141,39 @@ python predict.py \
 -model model.h5 \
 -shells 62 \
 -out_fpath prediction.txt
-
+```
 Where:
 
-rec_fpath = protein structure file
+- rec_fpath = protein structure file
 
-lig_fpath = ligand structure file
+- lig_fpath = ligand structure file
 
-shape = input tensor shape used by the model
+- shape = input tensor shape used by the model
 
-scaler = saved feature scaler
+- scaler = saved feature scaler
 
-model = trained OnionNet-2 model
+- model = trained OnionNet-2 model
 
-shells = number of residue-atom shells
+- shells = number of residue-atom shells
 
-out_fpath = output prediction file
-
+- out_fpath = output prediction file
+---
 ##  Batch Prediction Script
 
 To process all complexes in the dataset automatically, we used a loop script:
-
+```bash
 run_onionnet2_loop.sh
 
 This script:
 
 Reads index.csv
-
+```
 Iterates over each protein-ligand pair
 
 Runs OnionNet-2 predictions
 
 Collects predicted values
-
+---
 ##  Output Format
 
 All predicted values were collected into a single CSV file:
@@ -190,7 +188,7 @@ proteinpath,ligandpath,prediction
 ./ACE/protein.pdb,./ACE/lig3.sdf,-8.04
 
 This output file preserves the original dataset index and adds a column containing the predicted binding affinity.
-
+---
 ##  Files in this Directory
 
 Typical contents of this folder include:
@@ -202,7 +200,7 @@ OnionNet-2/
 ├── PDB database/
 ├── DUD-E/
 └── model/
-
+---
 ##  Reproducibility Notes
 
 OnionNet-2 was used exactly as implemented in the original repository.
@@ -210,7 +208,7 @@ OnionNet-2 was used exactly as implemented in the original repository.
 The only modification introduced in this workflow was the automation of predictions across the benchmark datasets.
 
 All input preparation steps and execution parameters are documented here to enable reproducibility.
-
+---
 ##  Citation
 
 If you use OnionNet-2 in your work, please cite the original publication:
@@ -221,6 +219,7 @@ OnionNet-2: A Convolutional Neural Network Model for Predicting
 Protein-Ligand Binding Affinity Based on Residue-Atom Contacting Shells.
 
 Frontiers in Chemistry. 2021.
+---
 ##  Disclaimer
 
 This folder documents the workflow used in our benchmark study.
