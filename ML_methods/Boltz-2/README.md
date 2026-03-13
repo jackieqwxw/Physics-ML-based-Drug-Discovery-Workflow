@@ -1,21 +1,20 @@
 # Boltz-2 Benchmark Workflow
 
-This directory documents the workflow used to run \*\*Boltz-2\*\* for the machine learning benchmark described in the manuscript:
+This directory documents the workflow used to run **Boltz-2** for the machine learning benchmark described in the manuscript:
 
 **The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.**    
 
-The purpose of this folder is to provide a reproducible workflow for generating Boltz-2 binding affinity predictions on the benchmark datasets used in this study.
+The purpose of this folder is to provide a reproducible workflow for generating **Boltz-2** binding affinity predictions on the benchmark datasets used in this study.
 
 ---
 
 ## Method Overview
 
-Boltz is a family of biomolecular interaction models. According to the official repository, \*\*Boltz-2\*\* is a biomolecular foundation model that jointly models complex structures and binding affinities. The repository states that the model is designed for efficient affinity prediction and provides both code and model weights under the MIT license. :contentReference\[oaicite:1]{index=1}
+Boltz is a family of biomolecular interaction models. According to the official repository, **Boltz-2** is a biomolecular foundation model that jointly models complex structures and binding affinities. The repository states that the model is designed for efficient affinity prediction and provides both code and model weights under the MIT license. 
 
 In this benchmark study, Boltz-2 was used as an additional machine learning affinity predictor to evaluate its performance in comparison with physics-based methods and other AI scoring functions in virtual screening workflows.
 
 ---
-
 
 ## Original Repository
 
@@ -30,10 +29,10 @@ https://github.com/jwohlwend/boltz
 The workflow documented here uses the original Boltz implementation and command-line interface provided by the authors. The official repository documents inference with:
 
 ```text
-boltz predict input\_path --use\_msa\_server
+boltz predict input_path --use_msa_server
 ```
 
-where input\_path can be a single YAML file or a directory of YAML files for batched processing.
+where input_path can be a single YAML file or a directory of YAML files for batched processing.
 
 ---
 
@@ -50,11 +49,12 @@ or, for development installation from GitHub:
 ```text
 git clone https://github.com/jwohlwend/boltz.git
 cd boltz
-pip install -e .\[cuda]
+pip install -e .[cuda]
 ```
 
-\---
-For CPU-only or non-CUDA systems, the repository notes that \[cuda] should be removed, although GPU execution is expected to be much faster
+---
+
+For CPU-only or non-CUDA systems, the repository notes that [cuda] should be removed, although GPU execution is expected to be much faster
 
 ## HPC Execution
 
@@ -72,20 +72,20 @@ This setup allowed automated execution across the benchmark dataset.
 
 ## Input Preparation
 
-Boltz-2 accepts YAML input files describing the biomolecules and the requested predictions. The official repository states that input\_path may refer either to a single YAML file or to a directory of YAML files for batched prediction.
+**Boltz-2** accepts YAML input files describing the biomolecules and the requested predictions. The official repository states that input\_path may refer either to a single YAML file or to a directory of YAML files for batched prediction.
 
 In this study, one YAML file was prepared for each protein-ligand complex.
 
 Typical organization:
 
 ```text
-Boltz-2/
+Boltz-2
 
-├── README.md
-├── run\_boltz2\_loop.sh
-├── yaml\_inputs/
-│   ├── complex\_001.yaml
-│   ├── complex\_002.yaml
+├── README.md/
+├── run_boltz2_loop.sh/
+├── yaml_inputs/
+│   ├── complex_001.yaml
+│   ├── complex_002.yaml
 │   └── ...
 ├── outputs/
 └── logs/
@@ -95,9 +95,9 @@ Boltz-2/
 
 Boltz-2 predictions were run using the command documented in the official repository:
 
-boltz predict input\_path --use\_msa\_server
+boltz predict input_path --use_msa_server
 
-In our workflow, input\_path referred either to a single YAML file or to a directory containing multiple YAML files. The --use\_msa\_server option was used during prediction, consistent with the official inference instructions.
+In our workflow, input_path referred either to a single YAML file or to a directory containing multiple YAML files. The --use_msa_server option was used during prediction, consistent with the official inference instructions.
 
 Batch Prediction Workflow
 
