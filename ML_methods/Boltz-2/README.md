@@ -20,7 +20,7 @@ In this benchmark study, Boltz-2 was used as an additional machine learning affi
 
 Official repository:
 
-```text
+```code
 https://github.com/jwohlwend/boltz
 ```
 
