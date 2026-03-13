@@ -152,8 +152,8 @@ python predict.py \
 -rec_fpath protein.pdb \
 -lig_fpath ligand.sdf \
 -shape 84,124,1 \
--scaler scaler.save \
--model model.h5 \
+-scaler train_scaler.scaler \
+-model 62shell_saved-model.h5 \
 -shells 62 \
 -out_fpath prediction.txt
 ```
@@ -202,13 +202,11 @@ onionnet2_predictions.csv
 Example output:
 
 proteinpath,ligandpath,prediction
-
+```
 ./ACE/protein.pdb,./ACE/lig1.sdf,-9.21
-
 ./ACE/protein.pdb,./ACE/lig2.sdf,-7.55
-
 ./ACE/protein.pdb,./ACE/lig3.sdf,-8.04
-
+```
 This output file preserves the original dataset index and adds a column containing the predicted binding affinity.
 
 ---
@@ -219,11 +217,19 @@ Typical contents of this folder include:
 OnionNet-2/
 ├── README.md
 ├── run_onionnet2_loop.sh
-├── run_onionnet2_predictions.py
-├── PDB_database/
+├── predict.py
+├── PDBBind/
 │   └── index.csv
+│   └── 1b8y_protein.pdb
+│   └── 1b8y_ligand.sdf
+│   └── 1bju_protein.pdb
+│   └── 1bju_ligand.sdf
 ├── DUD-E/
 │   └── index.csv
+│   └── 1A28.pdb
+│   └── 1A28_0.sdf
+│   └── 1CVU.pdb
+│   └── 1CVU_0.sdf
 └── model/
     ├── model.h5
     └── scaler.save└── model/
