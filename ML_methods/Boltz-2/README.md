@@ -4,21 +4,15 @@
 
 This directory documents the workflow used to run \*\*Boltz-2\*\* for the machine learning benchmark described in the manuscript:
 
-*“The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.”
+**The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.**    
 
 The purpose of this folder is to provide a reproducible workflow for generating Boltz-2 binding affinity predictions on the benchmark datasets used in this study.
 
 ---
 
-
-
 ## Method Overview
 
-
-
 Boltz is a family of biomolecular interaction models. According to the official repository, \*\*Boltz-2\*\* is a biomolecular foundation model that jointly models complex structures and binding affinities. The repository states that the model is designed for efficient affinity prediction and provides both code and model weights under the MIT license. :contentReference\[oaicite:1]{index=1}
-
-
 
 In this benchmark study, Boltz-2 was used as an additional machine learning affinity predictor to evaluate its performance in comparison with physics-based methods and other AI scoring functions in virtual screening workflows.
 
