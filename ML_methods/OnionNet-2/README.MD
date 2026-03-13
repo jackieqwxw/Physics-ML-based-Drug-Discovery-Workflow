@@ -69,8 +69,8 @@ pip install joblib==1.0.1
 pip install numpy==1.18.5
 pip install scipy==1.4.1
 ```
-```bash
 Clone the original OnionNet-2 repository:
+```bash
 git clone https://github.com/zchwang/OnionNet-2
 
 ```
@@ -80,23 +80,23 @@ git clone https://github.com/zchwang/OnionNet-2
 
 Protein and ligand structures were prepared prior to running OnionNet-2.
 
-- **Protein Preparation  **  Proteins were prepared by:
+- **Protein Preparation**  Proteins were prepared by:
 
-- Removing bound ligands
+-- Removing bound ligands
 
-- Adding hydrogen atoms
+-- Adding hydrogen atoms
 
-- Saving the resulting structures in PDB format
+-- Saving the resulting structures in PDB format
 
-- OpenBabel was used for these steps.
+-- OpenBabel was used for these steps.
 
-- ** Ligand Preparation **  Ligands were prepared by:
+- **Ligand Preparation**  Ligands were prepared by:
 
-- Generating 3D coordinates
+-- Generating 3D coordinates
 
-- Adding hydrogen atoms
+-- Adding hydrogen atoms
 
-- Saving the structures in SDF format
+-- Saving the structures in SDF format
 
 These prepared protein and ligand structures were then used as inputs for OnionNet-2 predictions.
 
