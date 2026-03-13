@@ -135,13 +135,7 @@ If the official CLI was pointed to a directory directly, Boltz-2 could also proc
 
 The official repository describes two main affinity-related outputs:   affinity_pred_value  and affinity_probability_binary
 
-According to the repository documentation:
-
-        affinity_probability_binary should be used to distinguish binders from decoys in hit discovery settings
-
-        affinity_pred_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM
-
-        In this study, Boltz-2 outputs were collected and organized for downstream comparison with other binding affinity predictors used in the benchmark.
+According to the repository documentation:   affinity_probability_binary should be used to distinguish binders from decoys in hit discovery settings, affinity_pred_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM.  In this study, Boltz-2 outputs were collected and organized for downstream comparison with other binding affinity predictors used in the benchmark.
 
 ---
 ##  Citation
