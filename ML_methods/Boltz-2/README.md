@@ -103,9 +103,9 @@ Boltz-2
 ## Prediction Command
 
 Boltz-2 predictions were run using the command documented in the official repository:
-
-boltz predict input_path --use_msa_server
-
+```text
+        boltz predict input_path --use_msa_server
+```
 In our workflow, input_path referred either to a single YAML file or to a directory containing multiple YAML files. The --use_msa_server option was used during prediction, consistent with the official inference instructions.
 
 Batch Prediction Workflow
@@ -124,8 +124,8 @@ Save logs for monitoring and troubleshooting on HPC
 
 Example execution pattern:
 
-for f in yaml\_inputs/\*.yaml; do
-&#x20;   boltz predict "$f" --use\_msa\_server
+for f in yaml_inputs/*.yaml; do
+   boltz predict "$f" --use_msa_server
 
 done
 
@@ -135,15 +135,15 @@ Output Interpretation
 
 The official repository describes two main affinity-related outputs:
 
-affinity\_pred\_value
+affinity_pred_value
 
-affinity\_probability\_binary
+affinity_probability_binary
 
 According to the repository documentation:
 
-affinity\_probability\_binary should be used to distinguish binders from decoys in hit discovery settings
+affinity_probability_binary should be used to distinguish binders from decoys in hit discovery settings
 
-affinity\_pred\_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM
+affinity_pred_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM
 
 In this study, Boltz-2 outputs were collected and organized for downstream comparison with other binding affinity predictors used in the benchmark.
 
