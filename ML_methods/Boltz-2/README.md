@@ -2,19 +2,11 @@
 
 \# Boltz-2 Benchmark Workflow
 
-
-
 This directory documents the workflow used to run \*\*Boltz-2\*\* for the machine learning benchmark described in the manuscript:
-
-
 
 \*\*“The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.”\*\*
 
-
-
 The purpose of this folder is to provide a reproducible workflow for generating Boltz-2 binding affinity predictions on the benchmark datasets used in this study.
-
-
 
 \---
 
