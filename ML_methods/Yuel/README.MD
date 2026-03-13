@@ -43,7 +43,7 @@ tensorflow==2.3.0
 tensorflow-probability
 dm-sonnet
 graph_nets
-''''
+```
 ## Dataset Format
 
 Yuel expects the input dataset as a CSV or TSV file containing compound and protein information.
@@ -63,7 +63,7 @@ Example columns:
 
 ```text
 Compound,CompType,Protein,Affinity
-''''
+```
 
 Notes:
 
@@ -90,4 +90,4 @@ python yuel.py predict \
 --nfeat=32 \
 --prot_size=2048 \
 --model=models/pdbbind.model
-''''
+```
