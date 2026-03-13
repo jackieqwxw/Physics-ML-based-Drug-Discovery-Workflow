@@ -41,7 +41,7 @@ The physics module predicts protein–ligand binding free energies using alchemi
    - Ensure consistent atom naming between topology and trajectory
 
 ## Part II: Machine Learning–Based Free Energy Prediction
-# Machine Learning Methods
+### Machine Learning Methods
 
 This directory contains the workflows and documentation for the machine learning scoring functions evaluated in this study:
 
@@ -63,7 +63,7 @@ The selected models represent different methodological categories, including dee
 
 ---
 
-## Implemented Methods
+### Implemented Methods
 
 The following machine learning methods were evaluated:
 
@@ -79,7 +79,7 @@ The following machine learning methods were evaluated:
 
 ---
 
-## Directory Structure
+### Directory Structure
 
 Each method has its own folder containing the workflow used in this benchmark.
 
@@ -95,4 +95,4 @@ ML_methods/
 └── RF-Score-VS/
 ```
 
-### Overview
+
