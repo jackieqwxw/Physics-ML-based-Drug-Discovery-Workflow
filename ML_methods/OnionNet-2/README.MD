@@ -217,16 +217,15 @@ Typical contents of this folder include:
 
 OnionNet-2/
 ├── README.md
-
 ├── run_onionnet2_loop.sh
-
 ├── run_onionnet2_predictions.py
-
-├── PDB database/
-
+├── PDB_database/
+│   └── index.csv
 ├── DUD-E/
-
+│   └── index.csv
 └── model/
+    ├── model.h5
+    └── scaler.save└── model/
 
 ---
 ##  Reproducibility Notes
@@ -242,11 +241,8 @@ All input preparation steps and execution parameters are documented here to enab
 
 If you use OnionNet-2 in your work, please cite the original publication:
 
-Wang Z, Zheng L, Liu Y, Qu Y, Li YQ, Zhao M, Mu Y, Li W.
-
-OnionNet-2: A Convolutional Neural Network Model for Predicting
-Protein-Ligand Binding Affinity Based on Residue-Atom Contacting Shells.
-Frontiers in Chemistry. 2021.
+Wang Z, Zheng L, Liu Y, Qu Y, Li YQ, Zhao M, Mu Y, Li W. OnionNet-2: A Convolutional Neural Network Model for Predicting
+Protein-Ligand Binding Affinity Based on Residue-Atom Contacting Shells. Frontiers in Chemistry. 2021.
 
 
 ---
