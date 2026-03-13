@@ -1,0 +1,12 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: "GPTGTGESKCPLMVKVLDAVRGSPAINVAVHVFRKAADDTWEPFASGKTSESGELHGLTTEEEFVEGIYKVEIDTKSYWKALGISPFHEHAEVVFTANDSGPRRYTIAALLSPYSYSTTAVVTNPKE"
+  - ligand:
+      id: L
+      smiles: "O=c1cc(-c2ccc(O)c(O)c2)oc2cc(Cl)cc(O)c12"
+
+properties:
+  - affinity:
+      binder: L

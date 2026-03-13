@@ -1,0 +1,12 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: "KSLLQQLLTE"
+  - ligand:
+      id: L
+      smiles: "Cc1noc(COc2cccc(F)c2F)c1-c1ccc(CNS(=O)(=O)C2(C)CC2)cc1"
+
+properties:
+  - affinity:
+      binder: L
