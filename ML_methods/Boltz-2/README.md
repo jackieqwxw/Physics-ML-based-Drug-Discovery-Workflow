@@ -67,6 +67,58 @@ The workflow consisted of two main steps:
     2- Running Boltz-2 predictions in batch mode using a shell script loop, This setup allowed automated execution across the benchmark dataset.
 
 ---
+## Input format
+
+Boltz takes inputs in `.yaml` format, which specifies the components of the complex.  
+Below is the full schema (each section is described in detail afterward):
+
+```yaml
+sequences:
+    - ENTITY_TYPE:
+        id: CHAIN_ID 
+        sequence: SEQUENCE      # only for protein, dna, rna
+        smiles: 'SMILES'        # only for ligand, exclusive with ccd
+        ccd: CCD                # only for ligand, exclusive with smiles
+        msa: MSA_PATH           # only for protein
+        modifications:
+          - position: RES_IDX   # index of residue, starting from 1
+            ccd: CCD            # CCD code of the modified residue
+        cyclic: false
+    - ENTITY_TYPE:
+        id: [CHAIN_ID, CHAIN_ID]    # multiple ids in case of multiple identical entities
+        ...
+constraints:
+    - bond:
+        atom1: [CHAIN_ID, RES_IDX, ATOM_NAME]
+        atom2: [CHAIN_ID, RES_IDX, ATOM_NAME]
+    - pocket:
+        binder: CHAIN_ID
+        contacts: [[CHAIN_ID, RES_IDX/ATOM_NAME], [CHAIN_ID, RES_IDX/ATOM_NAME]]
+        max_distance: DIST_ANGSTROM
+        force: false # if force is set to true (default is false), a potential will be used to enforce the pocket constraint
+    - contact:
+        token1: [CHAIN_ID, RES_IDX/ATOM_NAME]
+        token2: [CHAIN_ID, RES_IDX/ATOM_NAME]
+        max_distance: DIST_ANGSTROM
+        force: false # if force is set to true (default is false), a potential will be used to enforce the contact constraint
+
+templates:
+    - cif: CIF_PATH  # if only a path is provided, Boltz will find the best matchings
+      force: true # optional, if force is set to true (default is false), a potential will be used to enforce the template
+      threshold: DISTANCE_THRESHOLD # optional, controls the distance (in Angstroms) that the prediction can deviate from the template
+    - cif: CIF_PATH
+      chain_id: CHAIN_ID   # optional, specify which chain to find a template for
+    - cif: CIF_PATH
+      chain_id: [CHAIN_ID, CHAIN_ID]  # can be more than one
+      template_id: [TEMPLATE_CHAIN_ID, TEMPLATE_CHAIN_ID]
+    - pdb: PDB_PATH # if a pdb path is provided, Boltz will incrementally assign template chain ids based on the chain names in the PDB file (A1, A2, B1, etc)
+      chain_id: [CHAIN_ID, CHAIN_ID]
+      template_id: [TEMPLATE_CHAIN_ID, TEMPLATE_CHAIN_ID]
+properties:
+    - affinity:
+        binder: CHAIN_ID
+
+```
 
 ## Input Preparation
 
@@ -124,10 +176,11 @@ The batch workflow performed the following steps:
 
 Example execution pattern:
 
+```text
 for f in yaml_inputs/*.yaml; do
    boltz predict "$f" --use_msa_server
-
 done
+```
 
 If the official CLI was pointed to a directory directly, Boltz-2 could also process all YAML files in batch mode from that directory, as described in the repository documentation.
 
