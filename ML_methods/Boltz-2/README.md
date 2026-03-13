@@ -182,7 +182,7 @@ The batch workflow performed the following steps:
 
 Example execution pattern:
 
-```text
+```bash
 for f in yaml_inputs/*.yaml; do
    boltz predict "$f" --use_msa_server
 done
@@ -196,6 +196,21 @@ The official repository describes two main affinity-related outputs:   affinity_
 
 According to the repository documentation:   affinity_probability_binary should be used to distinguish binders from decoys in hit discovery settings, affinity_pred_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM.  In this study, Boltz-2 outputs were collected and organized for downstream comparison with other binding affinity predictors used in the benchmark.
 
+---
+
+`confidence_score`, `ptm` and `plddt` scores (and their interface and individual chain analogues) have a range of [0, 1], where higher values indicate higher confidence. `pde` scores have a unit of angstroms, where lower values indicate higher confidence.
+
+The output affinity `.json` file is organized as follows:
+```yaml
+{
+    "affinity_pred_value": 0.8367,             # Predicted binding affinity from the ensemble model
+    "affinity_probability_binary": 0.8425,     # Predicted binding likelihood from the ensemble model
+    "affinity_pred_value1": 0.8225,            # Predicted binding affinity from the first model of the ensemble
+    "affinity_probability_binary1": 0.0,       # Predicted binding likelihood from the first model in the ensemble
+    "affinity_pred_value2": 0.8225,            # Predicted binding affinity from the second model of the ensemble
+    "affinity_probability_binary2": 0.8402,    # Predicted binding likelihood from the second model in the ensemble
+}
+```
 ---
 ##  Citation
 
