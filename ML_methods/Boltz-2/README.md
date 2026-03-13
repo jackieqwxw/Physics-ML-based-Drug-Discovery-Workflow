@@ -145,9 +145,15 @@ Boltz-2
 │   ├── 1d3p.yaml
 │   └── ...
 ├── outputs/
-│   ├── boltz_results_1c5x.yaml
-│   ├── boltz_results_1cet.yaml
-│   ├── boltz_results_1d3d.yaml
+│   ├── boltz_results_1c5x
+│   │   ├── predictions
+│   │   │   ├──affinity_1c5x.json
+│   ├── boltz_results_1cet
+│   │   ├── predictions
+│   │   │   ├──affinity_1cet.json
+│   ├── boltz_results_1d3d
+│   │   ├── predictions
+│   │   │   ├──affinity_1d3d.json
 │   └── ...
 └── logs/
 ```
