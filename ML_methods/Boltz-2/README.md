@@ -311,7 +311,23 @@ Large output files are not included directly in this repository unless they are 
 
 If you use Boltz-2, please cite the official Boltz publications listed in the original repository. The repository provides citation information for both Boltz-2 and Boltz-1.
 
+```text
+@article{passaro2025boltz2,
+  author = {Passaro, Saro and Corso, Gabriele and Wohlwend, Jeremy and Reveiz, Mateo and Thaler, Stephan and Somnath, Vignesh Ram and Getz, Noah and Portnoi, Tally and Roy, Julien and Stark, Hannes and Kwabi-Addo, David and Beaini, Dominique and Jaakkola, Tommi and Barzilay, Regina},
+  title = {Boltz-2: Towards Accurate and Efficient Binding Affinity Prediction},
+  year = {2025},
+  doi = {10.1101/2025.06.14.659707},
+  journal = {bioRxiv}
+}
 
+@article{wohlwend2024boltz1,
+  author = {Wohlwend, Jeremy and Corso, Gabriele and Passaro, Saro and Getz, Noah and Reveiz, Mateo and Leidal, Ken and Swiderski, Wojtek and Atkinson, Liam and Portnoi, Tally and Chinn, Itamar and Silterra, Jacob and Jaakkola, Tommi and Barzilay, Regina},
+  title = {Boltz-1: Democratizing Biomolecular Interaction Modeling},
+  year = {2024},
+  doi = {10.1101/2024.11.19.624167},
+  journal = {bioRxiv}
+}
+```
 
 
 
