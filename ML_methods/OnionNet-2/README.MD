@@ -142,6 +142,7 @@ python predict.py \
 -shells 62 \
 -out_fpath prediction.txt
 ```
+
 Where:
 
 - rec_fpath = protein structure file
@@ -161,18 +162,21 @@ Where:
 ##  Batch Prediction Script
 
 To process all complexes in the dataset automatically, we used a loop script:
+
 ```bash
 run_onionnet2_loop.sh
 
 This script:
 
 Reads index.csv
+
 ```
 Iterates over each protein-ligand pair
 
 Runs OnionNet-2 predictions
 
 Collects predicted values
+
 ---
 ##  Output Format
 
@@ -188,6 +192,7 @@ proteinpath,ligandpath,prediction
 ./ACE/protein.pdb,./ACE/lig3.sdf,-8.04
 
 This output file preserves the original dataset index and adds a column containing the predicted binding affinity.
+
 ---
 ##  Files in this Directory
 
@@ -200,6 +205,7 @@ OnionNet-2/
 ├── PDB database/
 ├── DUD-E/
 └── model/
+
 ---
 ##  Reproducibility Notes
 
@@ -208,6 +214,7 @@ OnionNet-2 was used exactly as implemented in the original repository.
 The only modification introduced in this workflow was the automation of predictions across the benchmark datasets.
 
 All input preparation steps and execution parameters are documented here to enable reproducibility.
+
 ---
 ##  Citation
 
@@ -217,8 +224,9 @@ Wang Z, Zheng L, Liu Y, Qu Y, Li YQ, Zhao M, Mu Y, Li W.
 
 OnionNet-2: A Convolutional Neural Network Model for Predicting
 Protein-Ligand Binding Affinity Based on Residue-Atom Contacting Shells.
-
 Frontiers in Chemistry. 2021.
+
+
 ---
 ##  Disclaimer
 
