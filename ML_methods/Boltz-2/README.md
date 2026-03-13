@@ -41,7 +41,7 @@ where input_path can be a single YAML file or a directory of YAML files for batc
 The official repository recommends installation in a fresh Python environment. It documents installation with:
 
 ```text
-pip install boltz\[cuda] -U
+pip install boltz[cuda] -U
 ```
 
 or, for development installation from GitHub:
@@ -99,7 +99,7 @@ Boltz-2
 │   └── ...
 └── logs/
 ```
-
+---
 ## Prediction Command
 
 Boltz-2 predictions were run using the command documented in the official repository:
@@ -114,13 +114,13 @@ To process all benchmark complexes automatically, a shell script loop was used.
 
 The batch workflow performed the following steps:
 
-Read YAML input files prepared for each protein-ligand complex
+        1-Read YAML input files prepared for each protein-ligand complex
 
-Submit a Boltz-2 prediction for each file
+        2-Submit a Boltz-2 prediction for each file
 
-Store prediction outputs in the output directory
+        3-Store prediction outputs in the output directory
 
-Save logs for monitoring and troubleshooting on HPC
+        4-Save logs for monitoring and troubleshooting on HPC
 
 Example execution pattern:
 
@@ -131,39 +131,19 @@ done
 
 If the official CLI was pointed to a directory directly, Boltz-2 could also process all YAML files in batch mode from that directory, as described in the repository documentation.
 
-Output Interpretation
+## Output Interpretation
 
-The official repository describes two main affinity-related outputs:
-
-affinity_pred_value
-
-affinity_probability_binary
+The official repository describes two main affinity-related outputs:   affinity_pred_value  and affinity_probability_binary
 
 According to the repository documentation:
 
-affinity_probability_binary should be used to distinguish binders from decoys in hit discovery settings
+        affinity_probability_binary should be used to distinguish binders from decoys in hit discovery settings
 
-affinity_pred_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM
+        affinity_pred_value is intended for comparing affinities among binders and is reported as log10(IC50), derived from IC50 values measured in μM
 
-In this study, Boltz-2 outputs were collected and organized for downstream comparison with other binding affinity predictors used in the benchmark.
+        In this study, Boltz-2 outputs were collected and organized for downstream comparison with other binding affinity predictors used in the benchmark.
 
-Files in this Directory
-
-Typical contents of this folder include:
-
-If large prediction outputs are stored externally, this repository includes only the scripts and documentation necessary to reproduce the workflow.
-
-Reproducibility Notes
-
-The original Boltz codebase was used without re-implementation
-Predictions were executed on HPC
-
-One YAML file was prepared for each protein-ligand complex
-
-A shell script loop was used to automate batch inference
-
-Large output files are not included directly in this repository unless they are small enough for GitHub storage
-
+---
 ##  Citation
 
 If you use Boltz-2, please cite the official Boltz publications listed in the original repository. The repository provides citation information for both Boltz-2 and Boltz-1.
