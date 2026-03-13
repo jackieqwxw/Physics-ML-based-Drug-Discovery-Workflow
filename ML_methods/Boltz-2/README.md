@@ -62,11 +62,9 @@ Boltz-2 predictions in this study were run on an HPC environment.
 
 The workflow consisted of two main steps:
 
-Preparing one YAML input file for each protein-ligand complex
+    1- Preparing one YAML input file for each protein-ligand complex
 
-Running Boltz-2 predictions in batch mode using a shell script loop
-
-This setup allowed automated execution across the benchmark dataset.
+    2- Running Boltz-2 predictions in batch mode using a shell script loop, This setup allowed automated execution across the benchmark dataset.
 
 ---
 
