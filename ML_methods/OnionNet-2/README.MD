@@ -46,7 +46,6 @@ scikit-learn==0.22.1
 joblib==1.0.1
 numpy==1.18.5
 scipy==1.4.1
-
 ```
 If GPU acceleration is available, `tensorflow-gpu==2.3` may be used instead of `tensorflow==2.3`.
 
@@ -116,10 +115,7 @@ proteinpath,ligandpath
 ---
 ## Pre-trained Model Files
 
-OnionNet-2 requires the pre-trained model and scaler files.
-
-These files are not included in this repository due to GitHub size limits.
-
+OnionNet-2 requires the pre-trained model and scaler files.  These files are not included in this repository due to GitHub size limits.
 They can be obtained from the original OnionNet-2 repository:
 
 https://zenodo.org/records/10728089/62shell_saved-model.h5
