@@ -50,7 +50,7 @@ ML_methods/
 ├── GNINA/
 ├── Boltz-2/
 └── RF-Score-VS/
-
+```
 ---
 Each method folder typically contains:
 
