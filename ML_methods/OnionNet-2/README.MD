@@ -34,10 +34,11 @@ This repository does not re-implement the OnionNet-2 model. Instead, it document
 
 The OnionNet-2 environment was created following the installation instructions from the original repository.
 
-### Required Packages
+## Required Packages
 
 The following software versions were used:
 
+```text
 python >= 3.8
 tensorflow==2.3
 pandas==1.3.4
@@ -46,7 +47,7 @@ joblib==1.0.1
 numpy==1.18.5
 scipy==1.4.1
 
-
+```
 If GPU acceleration is available, `tensorflow-gpu==2.3` may be used instead of `tensorflow==2.3`.
 
 ---
@@ -70,6 +71,8 @@ pip install scipy==1.4.1
 
 Clone the original OnionNet-2 repository:
 git clone https://github.com/zchwang/OnionNet-2
+
+```
 
 ##  Input Preparation
 
