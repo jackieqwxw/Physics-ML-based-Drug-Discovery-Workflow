@@ -57,13 +57,13 @@ Yuel expects the input dataset as a CSV or TSV file containing compound and prot
 
 Typical dataset columns include:
 
-  -Compound (SMILES or InChI)
+  - Compound (SMILES or InChI)
 
-  -Compound type (smi or inchi)
+  - Compound type (smi or inchi)
 
-  -Protein sequence
+  - Protein sequence
 
-  -Binding affinity
+  - Binding affinity
 
 Example columns:
 
@@ -74,13 +74,13 @@ Compound,CompType,Protein,Affinity
 
 Notes:
 
-If the compound column contains SMILES, the compound type must be smi
+- If the compound column contains SMILES, the compound type must be smi
 
-If the compound column contains InChI, the compound type must be inchi
+- If the compound column contains InChI, the compound type must be inchi
 
-The protein column must contain the amino acid sequence
+- The protein column must contain the amino acid sequence
 
-The affinity column must be present even during prediction (can be filled with placeholder values)
+- The affinity column must be present even during prediction (can be filled with placeholder values)
 
 ---
 
