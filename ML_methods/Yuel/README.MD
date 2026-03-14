@@ -148,9 +148,19 @@ Large datasets and output files may not be included in this repository due to Gi
 ---
 ##  Citation
 
-If you use Yuel in your work, please cite the original publication:
+If you use Yuel in your work, please cite the original publication: **Yuel: Compound–Protein Interaction Prediction with High Generalizability**
 
-Yuel: Compound–Protein Interaction Prediction with High Generalizability
+```bibtex
+@article{wang2022yuel,
+  title={Yuel: Improving the Generalizability of Structure-Free Compound–Protein Interaction Prediction},
+  author={Wang, Jian and Dokholyan, Nikolay V.},
+  journal={Journal of Chemical Information and Modeling},
+  year={2022},
+  volume={62},
+  number={3},
+  pages={463--471},
+  doi={10.1021/acs.jcim.1c01531}
+}
 
 ---
 
@@ -159,3 +169,4 @@ Yuel: Compound–Protein Interaction Prediction with High Generalizability
 This folder documents the workflow used to run Yuel predictions for the benchmark study.
 
 The Yuel model and source code belong to the original authors and are available through their official repository.
+
