@@ -1,10 +1,10 @@
 # GNINA Benchmark Workflow
 
-This directory documents the procedure used to generate ** GNINA docking predictions ** for the benchmark described in the manuscript:
+This directory documents the procedure used to generate **GNINA docking predictions** for the benchmark described in the manuscript:
 
-**“The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.” **
+**“The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.”**
 
-GNINA was used as a ** deep learning–enhanced docking and scoring method ** to evaluate protein–ligand binding affinity predictions in comparison with other machine learning and physics-based methods.
+GNINA was used as a **deep learning–enhanced docking and scoring method** to evaluate protein–ligand binding affinity predictions in comparison with other machine learning and physics-based methods.
 ---
 
 ```text
