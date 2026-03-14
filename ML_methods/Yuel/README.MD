@@ -166,7 +166,7 @@ If you use Yuel in your work, please cite the original publication: **Yuel: Comp
 
 ##  Disclaimer
 
-This folder documents the workflow used to run Yuel predictions for the benchmark study.
+This folder documents the workflow used to run Yuel predictions for the benchmark study. 
 
-The Yuel model and source code belong to the original authors and are available through their official repository.
+The Yuel model and source code belong to the original authors and are available through their official repository.  https://bitbucket.org/dokhlab/yuel/src/master/
 
