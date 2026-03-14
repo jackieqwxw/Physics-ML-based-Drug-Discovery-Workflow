@@ -10,7 +10,7 @@ The purpose of this folder is to provide a reproducible procedure for generating
 
 ## Method Overview
 
-RF-Score-VS is a **random forest based scoring function for virtual screening**. According to the official repository, the standalone implementation corresponds to **RF-Score-VS v2**, which uses descriptors based on counts of atom types within a **12 Å radius**, divided into **2 Å bins**. :contentReference[oaicite:1]{index=1}
+RF-Score-VS is a **random forest based scoring function for virtual screening**. According to the official repository, the standalone implementation corresponds to **RF-Score-VS v2**, which uses descriptors based on counts of atom types within a **12 Å radius**, divided into **2 Å bins**. 
 
 In this benchmark study, RF-Score-VS was used as a classical machine learning scoring function to evaluate how well a random forest based rescoring method can distinguish active ligands from decoys and compare with other machine learning and physics-based affinity predictors.
 
@@ -27,6 +27,16 @@ The official repository states that the standalone scoring function is distribut
 
 ---
 
+## Standalone scoring function
+The RF-Score-VS is available as a standalone scoring function with no dependencies required in separate repository.
+
+Download RF-Score-VS for your platform:
+
+- [Linux 64-bit](http://wojcikowski.pl/travis/rf-score-vs_v1.0_linux_2.7.zip)
+- [Windows 64-bit](http://wojcikowski.pl/travis/rf-score-vs_v1.0_win_2.7.zip)
+- [MacOS 64-bit](http://wojcikowski.pl/travis/rf-score-vs_v1.0_macos_2.7.zip)
+
+---
 ## Supported Input Formats
 
 The standalone RF-Score-VS documentation supports the following ligand formats:
