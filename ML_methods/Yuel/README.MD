@@ -85,6 +85,10 @@ Notes:
 ---
 
 ## Prediction
+Yuel predictions were generated using the `predict` command provided in the original implementation.
+
+Example command:
+
 ```text
 Example prediction command:
 python yuel.py predict \
@@ -98,6 +102,7 @@ python yuel.py predict \
 --prot_size=2048 \
 --model=models/pdbbind.model
 ```
+
 ---
 
 ## Custom Dataset Prediction
@@ -115,6 +120,16 @@ Example dataset format:
 Compound,CompType,Protein,Affinity
 CCO,smi,MKVLWAALLVTFLAGCQAKVE...,0
 CCN,smi,MGDVEKGKKIFIMKCSQCHTV...,0
+```
+
+To simplify reproducibility, wrapper scripts were created to execute the prediction command automatically.
+
+These scripts are provided in this repository for both Linux/HPC and Windows environments.
+
+```text
+run_yuel_predict.sh – Linux/HPC script used to run Yuel predictions.
+
+run_yuel_predict.bat – Windows batch script for running predictions.
 ```
 ---
 
@@ -148,9 +163,25 @@ The original Yuel implementation was used without modification.
 
 Predictions were generated using the pre-trained models provided by the authors.
 
+All affinity predictions reported in the paper were produced using the `pdbbind.model` checkpoint without retraining.
+
 Dataset formatting followed the structure required by the Yuel prediction interface.
 
-Large datasets and output files may not be included in this repository due to GitHub storage limitations
+Large datasets and output files may not be included in this repository due to GitHub storage limitations.
+
+## Automation Scripts
+
+To simplify execution and improve reproducibility, wrapper scripts were created to automate the Yuel prediction command. These scripts allow users to run predictions without manually specifying all parameters.
+
+Both Linux/HPC and Windows environments are supported.
+
+- `run_yuel_predict.sh`  
+  Shell script used to run Yuel predictions on Linux systems or HPC clusters.
+
+- `run_yuel_predict.bat`  
+  Windows batch script used to execute the same prediction workflow in a Windows environment.
+
+These scripts call the `yuel.py predict` command with the parameters used in this study and allow users to reproduce the prediction workflow with minimal setup.
 
 ---
 ##  Citation
