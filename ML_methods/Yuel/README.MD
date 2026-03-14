@@ -126,9 +126,16 @@ Typical contents of this folder include:
 Yuel/
 ├── README.md
 ├── yuel.py
+├── Run_DUD-E.bat
+├── Run_PDB.bat
+├── Run_DUD-E.sh
+├── Run_PDB.sh
 ├── data/
 │   ├── PDB.csv
 │   ├── DUD-E.csv
+├── models/
+│   ├── davis.model
+│   ├── pdbbind.model
 ├── outputs/
 │   ├── PDB.txt
 └── ├── DUD-E.txt
