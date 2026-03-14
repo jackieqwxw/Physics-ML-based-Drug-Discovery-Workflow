@@ -88,7 +88,7 @@ Notes:
 ```text
 Example prediction command:
 python yuel.py predict \
---data=data/pdb.csv \
+--data=data/PDB.csv \
 --compound_column=Ligand \
 --compound_type_column=CompType \
 --protein_column=Sequence \
@@ -161,7 +161,7 @@ If you use Yuel in your work, please cite the original publication: **Yuel: Comp
   pages={463--471},
   doi={10.1021/acs.jcim.1c01531}
 }
-
+```
 ---
 
 ##  Disclaimer
