@@ -10,7 +10,7 @@
 #
 # Lab:
 # Kireev Lab
-# University of Missouri
+# University of Missouri-Columbia
 #
 # Author: Hamza Hentabli
 #
