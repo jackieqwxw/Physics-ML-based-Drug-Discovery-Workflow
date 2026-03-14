@@ -20,18 +20,86 @@ In this study, KDEEP was used as a **deep learning baseline scoring function** t
 
 ---
 
+## Original Tool
 
+KDEEP predictions were generated using the PlayMolecule platform:
+
+PlayMolecule              https://open.playmolecule.org/
+
+KDEEP tool page:              https://open.playmolecule.org/tools/kdee
 
 ---
 
+## Input Dataset Preparation
 
+Each protein–ligand complex was prepared in the following format:
 
+```text
+system_name_protein.pdb
+system_name_ligand.sdf
+```
+
+Example:
+
+```text
+1b8y_protein.pdb
+1b8y_ligand.sdf
+```
+
+A dataset index file was also prepared:
+
+```text
+index.csv
+```
+
+Example structure:
+
+systemname,proteinpath,ligandpath,label
+1b8y,1b8y_protein.pdb,1b8y_ligand.sdf,0
+
+All input files were compressed into a single archive:
+
+```text
+dataset.zip
+```
 
 ---
 
+## Running KDEEP Predictions
 
+KDEEP predictions were generated using the PlayMolecule web interface.
 
+###  Step 1 – Open PlayMolecule
 
+Navigate to:
+
+```text
+https://open.playmolecule.org/tools
+```
+
+Select:
+
+```text
+KDEEP – Binding Affinity Prediction
+```
+
+###  Step 2 – Select Advanced Options
+
+Enable:
+
+```text
+Advanced Options
+```
+Then choose:
+
+```text
+Protein-Ligand Dataset
+```
+Upload the prepared dataset archive:
+
+```text
+dataset.zip
+```
 ---
 
 
