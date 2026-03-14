@@ -13,9 +13,7 @@ GNINA
 ---
 
 
-```bash
-GNINA
-```
+
 ---
 
 ## Method Overview
@@ -72,9 +70,11 @@ The commands below follow the setup used in the Google Colab environment.
 
 GNINA depends on molecular processing tools such as OpenBabel and Python libraries for visualization.
 
-Install OpenBabel
-!apt install openbabel
+#### Install OpenBabel
 
+```bash
+!apt install openbabel
+```
 
 Purpose:
 
@@ -87,10 +87,12 @@ commonly used in docking pipelines
 ---
 
 #### Install Miniconda
+
+```bash
 !wget -c https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 !chmod +x Miniconda3-latest-Linux-x86_64.sh
 !bash ./Miniconda3-latest-Linux-x86_64.sh -b -f -p /usr/local
-
+```
 
 Purpose:
 
@@ -102,7 +104,9 @@ installs scientific dependencies easily
 
 #### Install OpenBabel via Conda
 
+```bash
 !conda install -q -y -c conda-forge openbabel
+```
 Purpose:
 
 ensures compatibility with GNINA molecular processing tools
@@ -110,16 +114,21 @@ ensures compatibility with GNINA molecular processing tools
 ---
 
 #### Configure Python Path
+
+```bash
 import sys
 sys.path.append('/usr/local/lib/python3.8/site-packages/')
-
+```
 Purpose:
 
 ensures installed packages are available to Python
 ---
 
 #### Install Visualization Library
+
+```bash
 !pip install py3Dmol
+```
 Purpose:
 
 enables 3D visualization of docking results in notebooks
@@ -128,11 +137,20 @@ enables 3D visualization of docking results in notebooks
 ### 2. Download GNINA
 
 Download the GNINA executable.
+
+```bash
 !wget https://github.com/gnina/gnina/releases/download/v1.0.1/gnina
+```
 Make the binary executable.
+
+```bash
 !chmod +x gnina
+```
 Verify installation.
+
+```bash
 !./gnina
+```
 This prints the GNINA help message.
 
 ---
@@ -147,7 +165,9 @@ ligand structure (SDF or PDB)
 
 Example command:
 
+```bash
 !./gnina -r rec.pdb -l lig.pdb --autobox_ligand lig.pdb
+```
 
 Explanation of options:
 
@@ -164,17 +184,24 @@ This performs docking and prints predicted poses and affinity scores.
 
 To save docking results:
 
+```bash
 !./gnina -r rec.pdb -l lig.pdb --autobox_ligand lig.pdb --seed 0 -o docked.sdf.gz
+```
 
 Explanation of additional options:
 
 Option	Meaning
+
+```bash
 --seed 0	ensures reproducibility
+```
 -o	output file containing docking poses
 
 Output file:
 
+```bash
 docked.sdf.gz
+```
 
 Each pose contains predicted affinity values.
 ---
@@ -183,7 +210,9 @@ Each pose contains predicted affinity values.
 
 GNINA can also score an existing pose.
 
+```bash
 !./gnina --score_only -r rec.pdb -l lig.pdb --verbosity=2
+```
 
 Purpose:
 
@@ -195,12 +224,17 @@ useful for rescoring docked poses
 
 ### 6. Inspect Scoring Functions
 
+```bash
 To list scoring options:
 !./gnina --help | grep scoring | head -3
+```
 
 To print scoring terms used by GNINA
 
+
+```bash
 !./gnina --print_terms
+```
 
 These commands show how GNINA computes its predicted binding affinity.
 
@@ -209,9 +243,12 @@ Input Dataset
 
 The dataset used in this study contains:
 
+
+```bash
 index.csv
 1b8y_protein.pdb
 1b8y_ligand.sdf
+```
 ---
 
 
@@ -221,6 +258,8 @@ The GNINA docking workflow was automated by looping over all entries in index.cs
 
 Example code used in the Colab environment:
 
+
+```bash
 -r                 receptor structure (PDB)
 -l                 ligand structure (SDF)
 --autobox_ligand   automatically define docking box using ligand
@@ -228,6 +267,7 @@ Example code used in the Colab environment:
 --num_modes 30     generate up to 30 docking poses
 --seed 0           fixed seed for reproducibility
 -o                 output docking poses
+```
 
 ---
 
@@ -235,11 +275,14 @@ Example code used in the Colab environment:
 
 GNINA produces an SDF output file for each docking run.
 
+
+```bash
 Example output:
 result_docking3/
 0_1b8y.sdf
 1_2xyz.sdf
 2_3abc.sdf
+```
 
 Each SDF file contains docking poses and associated scoring information.
 
@@ -274,7 +317,9 @@ If you use GNINA in your research, please cite:
 
 GNINA project:
 
+```bash
 https://github.com/gnina/gnina
+```
 
 
 If you use GNINA in your research, please cite:
