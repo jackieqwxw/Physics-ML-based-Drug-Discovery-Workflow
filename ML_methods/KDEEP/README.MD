@@ -1,5 +1,74 @@
-## KDEEP
+## KDEEP Benchmark Workflow
 
-KDEEP is a 3D convolutional neural network model developed to predict protein-ligand binding affinity from three-dimensional structural information. The method encodes protein-ligand complexes as voxelized grids containing pharmacophoric and physicochemical features, which are processed by a deep CNN architecture.
+This directory documents the procedure used to generate **KDEEP binding affinity predictions** for the benchmark described in the manuscript:
 
-In this benchmark, KDEEP was applied to evaluate how well deep learning models trained on structural data can reproduce experimental binding free energies and distinguish active ligands from decoys in virtual screening datasets.
+** “The Last Mile Problem: A Critical Assessment of Physics-based and AI Tools in Virtual Screening.”**
+
+KDEEP predictions were generated using the **PlayMolecule web platform**, which provides an implementation of the KDEEP deep learning model.
+
+---
+
+## Method Overview
+
+KDEEP is a deep learning scoring function designed to predict ** absolute protein–ligand binding affinity** using **3D convolutional neural networks (3D-CNNs)** applied to voxelized representations of protein–ligand complexes.
+
+The model encodes the binding site environment into a three-dimensional grid describing physicochemical properties of both the protein and ligand. A convolutional neural network then learns the relationship between these spatial descriptors and experimental binding affinities.
+
+The method was trained using the **PDBbind database** and achieves strong correlation between predicted and experimental binding affinities in benchmark datasets.
+
+In this study, KDEEP was used as a **deep learning baseline scoring function** to compare with other machine learning and physics-based affinity prediction methods.
+
+---
+
+
+
+---
+
+
+
+
+---
+
+
+
+
+---
+
+
+
+
+---
+
+
+
+
+
+---
+
+
+
+
+
+---
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+---
+
+
+
+
+
+
+---
