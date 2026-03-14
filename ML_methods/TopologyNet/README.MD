@@ -100,7 +100,18 @@ Typical contents of this folder include:
 TopologyNet/
 ├── README.md
 ├── run_topologynet.sh
-├── dataset/
+├── PDBBind/
+│   └── index.csv
+│   └── 1b8y_protein.pdb
+│   └── 1b8y_ligand.sdf
+│   └── 1bju_protein.pdb
+│   └── 1bju_ligand.sdf
+├── DUD-E/
+│   └── index.csv
+│   └── 1A28.pdb
+│   └── 1A28_0.sdf
+│   └── 1CVU.pdb
+│   └── 1CVU_0.sdf
 ├── features/
 └── outputs/
 ```
