@@ -44,6 +44,13 @@ tensorflow-probability
 dm-sonnet
 graph_nets
 ```
+
+A Docker image containing the required environment is also available:
+```text
+docker pull juw1179/yuel:0.0.1
+```
+---
+
 ## Dataset Format
 
 Yuel expects the input dataset as a CSV or TSV file containing compound and protein information.
