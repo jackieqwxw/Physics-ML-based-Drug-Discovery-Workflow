@@ -161,7 +161,7 @@ This value represents the predicted **binding free energy generated** by the KDE
 
 ---
 
-Reproducibility Notes
+## Reproducibility Notes
 
 - KDEEP predictions were generated using the **PlayMolecule server implementation.**
 
@@ -171,28 +171,30 @@ Reproducibility Notes
 
 - Input datasets were prepared according to the required PlayMolecule format.
 
-
-
 ---
 
 
+## Citation
+
+If you use KDEEP in your research, please cite:
+
+Jiménez J., Škalič M., Martínez-Rosell G., De Fabritiis G.
+KDEEP: Protein–Ligand Absolute Binding Affinity Prediction via 3D-Convolutional Neural Networks
+Journal of Chemical Information and Modeling, 58, 287-296 (2018).
+https://doi.org/10.1021/acs.jcim.7b00650
+
+### BibTeX
+
+```bibtex
+@article{jimenez2018kdeep,
+  title={KDEEP: Protein–Ligand Absolute Binding Affinity Prediction via 3D-Convolutional Neural Networks},
+  author={Jiménez, José and Škalič, Miha and Martínez-Rosell, Gerard and De Fabritiis, Gianni},
+  journal={Journal of Chemical Information and Modeling},
+  volume={58},
+  number={2},
+  pages={287--296},
+  year={2018},
+  doi={10.1021/acs.jcim.7b00650}
+}
 
 
-
-
-
----
-
-
-
-
-
-
----
-
-
-
-
-
-
----
