@@ -99,7 +99,12 @@ Typical contents of this folder include:
 ```text
 TopologyNet/
 ├── README.md
-├── run_topologynet.sh
+├── run_topologynet_predictions.py
+├── inference.py
+├── ph.py
+├── preprocessing.py
+├── sdf2mol2.py
+├── unit_conversion.py
 ├── PDBBind/
 │   └── index.csv
 │   └── 1b8y_protein.pdb
