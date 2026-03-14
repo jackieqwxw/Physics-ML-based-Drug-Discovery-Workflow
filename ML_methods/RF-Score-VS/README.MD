@@ -83,16 +83,20 @@ RF-Score-VS/
 ├── rf-score-vs.exe
 ├── run_rfscorevs_loop.bat
 ├── DUD-E_actives/
-│   ├── 1abc_protein.pdb
-│   ├── 1abc_ligand.sdf
+│   ├── ACE-2OC2_protein.pdb
+│   ├── ACE-2OC2_Ligand.sdf
+│   ├── ACE-2OC2.csv
 │   └── ...
 ├── DUD-E_decoys/
-│   ├── 2def_protein.pdb
-│   ├── 2def_ligand.sdf
+│   ├── ACE-ZINC04533490_protein.pdb
+│   ├── ACE-ZINC04533490_Ligand.sdf
+│   ├── ACE-ZINC04533490.csv
 │   └── ...
 └── PDB/
-    ├── 3ghi_protein.pdb
-    ├── 3ghi_ligand.sdf
+    ├── 1c5x_protein.pdb
+    ├── 1c5x_ligand.sdf
+    ├── 1cet_protein.pdb
+    ├── 1cet_ligand.sdf
     └── ...
 ```
 
@@ -111,7 +115,7 @@ It also documents CSV output using:
 rf-score-vs --receptor protein.pdb ligands.sdf -o csv --field "name" --field "RFScoreVS_v2"
 ```
 
-The repository states that RF-Score-VS predictions are reported in **-pK units **, and that **higher scores indicate better predicted binding**.
+The repository states that RF-Score-VS predictions are reported in ** -pK units **, and that **higher scores indicate better predicted binding**.
 
 ---
 
