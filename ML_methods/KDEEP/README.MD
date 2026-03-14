@@ -160,6 +160,28 @@ dG [kcal/mol] mean predict
 This value represents the predicted **binding free energy generated** by the KDEEP model and was used for comparison with other machine learning scoring functions.
 
 ---
+##  Files in this Directory
+
+Typical contents of this folder include:
+```text
+KDEEP/
+├── README.md
+├── example_dataset.zip
+├── PDBBind/
+│   └── index.csv
+│   └── 1b8y_protein.pdb
+│   └── 1b8y_ligand.sdf
+│   └── 1bju_protein.pdb
+│   └── 1bju_ligand.sdf
+└── DUD-E/
+    └── index.csv
+    └── 1A28.pdb
+    └── 1A28_0.sdf
+    └── 1CVU.pdb
+    └── 1CVU_0.sdf
+```
+
+---
 
 ## Reproducibility Notes
 
