@@ -1,3 +1,30 @@
+# =========================================================
+# Boltz-2 Batch Prediction Script
+#
+# Developed for benchmarking machine learning scoring
+# functions in virtual screening.
+#
+# Study:
+# The Last Mile Problem: A Critical Assessment of
+# Physics-based and AI Tools in Virtual Screening
+#
+# Lab:
+# Kireev Lab
+# University of Missouri
+#
+# Author: Hamza Hentabli
+#
+# Method:
+# Boltz-2 biomolecular interaction model
+# https://github.com/jwohlwend/boltz
+#
+# Reference:
+# Wohlwend J., et al.
+# Boltz-2: A Biomolecular Foundation Model for Interaction
+# Prediction and Binding Affinity Estimation
+#
+# =========================================================
+
 #!/bin/bash
 #SBATCH --job-name=boltz_gpu
 #SBATCH --account=dkhf3-lab
