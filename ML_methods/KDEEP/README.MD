@@ -100,20 +100,76 @@ Upload the prepared dataset archive:
 ```text
 dataset.zip
 ```
+
+###  Step 3 – Model Selection
+
+Use the default KDEEP model:
+
+```text
+default.ckpt
+```
+
+Provide a job name and submit the job.
+
+###  Step 4 – Run Prediction
+
+After submission:
+
+- the PlayMolecule server processes the dataset
+
+- predictions are generated for all protein–ligand complexes
+
+Typical runtime for the dataset used in this study was approximately:  
+```text
+~3 hours
+```
+
 ---
 
+## Output Files
 
+After job completion, the results can be downloaded as a **CSV file**.
 
+The output CSV contains several columns including:
+
+```text
+pdb_id
+Ligand
+SMILES
+Kd/Ki(M)
+Gexp
+Gpbsa
+abs_Error
+norm_ΔGexp
+norm_ΔGcalc
+norm_Error
+class
+dG [kcal/mol] mean predict
+```
 
 ---
 
+## Benchmark Value Used in This Study
 
+For the benchmarking analysis reported in the manuscript, the following column was used:
 
+```text
+dG [kcal/mol] mean predict
+```
 
+This value represents the predicted **binding free energy generated** by the KDEEP model and was used for comparison with other machine learning scoring functions.
 
 ---
 
+Reproducibility Notes
 
+- KDEEP predictions were generated using the **PlayMolecule server implementation.**
+
+- The **default pretrained model** (default.ckpt) was used.
+
+- No retraining or modification of the KDEEP model was performed.
+
+- Input datasets were prepared according to the required PlayMolecule format.
 
 
 
