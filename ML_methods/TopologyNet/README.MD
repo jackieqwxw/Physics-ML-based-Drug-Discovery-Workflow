@@ -104,14 +104,18 @@ TopologyNet/
 │   └── index.csv
 │   └── 1b8y_protein.pdb
 │   └── 1b8y_ligand.sdf
+│   └── 1b8y_ligand.mol2
 │   └── 1bju_protein.pdb
 │   └── 1bju_ligand.sdf
+│   └── 1bju_ligand.mol2
 ├── DUD-E/
 │   └── index.csv
 │   └── 1A28.pdb
 │   └── 1A28_0.sdf
+│   └── 1A28_0.mol2
 │   └── 1CVU.pdb
 │   └── 1CVU_0.sdf
+│   └── 1CVU_0.mol2
 ├── features/
 └── outputs/
 ```
