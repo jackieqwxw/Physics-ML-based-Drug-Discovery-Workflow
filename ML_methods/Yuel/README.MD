@@ -88,7 +88,7 @@ Notes:
 ```text
 Example prediction command:
 python yuel.py predict \
---data=data/pdbbind-test.csv \
+--data=data/pdb.csv \
 --compound_column=Ligand \
 --compound_type_column=CompType \
 --protein_column=Sequence \
@@ -125,7 +125,7 @@ Typical contents of this folder include:
 ```text
 Yuel/
 ├── README.md
-├── run_yuel_prediction.sh
+├── yuel.py
 ├── dataset/
 ├── outputs/
 └── logs/
