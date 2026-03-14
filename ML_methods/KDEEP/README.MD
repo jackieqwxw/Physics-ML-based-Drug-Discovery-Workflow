@@ -133,17 +133,6 @@ After job completion, the results can be downloaded as a **CSV file**.
 The output CSV contains several columns including:
 
 ```text
-pdb_id
-Ligand
-SMILES
-Kd/Ki(M)
-Gexp
-Gpbsa
-abs_Error
-norm_ΔGexp
-norm_ΔGcalc
-norm_Error
-class
 dG [kcal/mol] mean predict
 ```
 
