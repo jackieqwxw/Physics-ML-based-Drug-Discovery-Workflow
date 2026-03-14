@@ -10,8 +10,6 @@ GNINA was used as a ** deep learning–enhanced docking and scoring method ** to
 ```text
 GNINA
 ```
----
-
 
 
 ---
@@ -78,11 +76,9 @@ GNINA depends on molecular processing tools such as OpenBabel and Python librari
 
 Purpose:
 
-converts molecular formats
-
-prepares ligand structures
-
-commonly used in docking pipelines
+- converts molecular formats
+- prepares ligand structures
+- commonly used in docking pipelines
 
 ---
 
@@ -96,9 +92,8 @@ commonly used in docking pipelines
 
 Purpose:
 
-provides package management
-
-installs scientific dependencies easily
+- provides package management
+- installs scientific dependencies easily
 
 ---
 
