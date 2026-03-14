@@ -126,7 +126,8 @@ Typical contents of this folder include:
 Yuel/
 ├── README.md
 ├── yuel.py
-├── dataset/
+├── data/
+
 ├── outputs/
 └── logs/
 ```
