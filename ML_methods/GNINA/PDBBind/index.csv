@@ -1,0 +1,5 @@
+systemname,proteinpath,ligandpath,label
+1b8y,./1b8y_protein.pdb,./1b8y_ligand.sdf,0
+1bju,./1bju_protein.pdb,./1bju_ligand.sdf,0
+1bjv,./1bjv_protein.pdb,./1bjv_ligand.sdf,0
+1bma,./1bma_protein.pdb,./1bma_ligand.sdf,0

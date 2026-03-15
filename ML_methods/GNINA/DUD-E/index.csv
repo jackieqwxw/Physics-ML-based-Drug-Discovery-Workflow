@@ -1,0 +1,5 @@
+systemname,proteinpath,ligandpath,label
+test0,./1A28.pdb,./1A28_0.sdf,0
+test1,./1CVU.pdb,./1CVU_0.sdf,0
+test2,./1CX2.pdb,./1CX2_0.sdf,0
+test3,./1DQ8.pdb,./1DQ8_0.sdf,0
