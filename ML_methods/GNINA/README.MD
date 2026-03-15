@@ -7,22 +7,6 @@ This directory documents the procedure used to generate **GNINA docking predicti
 GNINA was used as a deep learning–enhanced docking and scoring method to evaluate protein–ligand binding affinity predictions in comparison with other machine learning and physics-based methods.
 ---
 
-```text
-GNINA
-```
-
-
-`python train.py`
-
-```python
-print("Hello")
-```
-
-
-![Python](https://img.shields.io/badge/python-3.10-blue)
-
----
-
 ## Method Overview
 
 GNINA is a molecular docking tool derived from AutoDock Vina that incorporates convolutional neural networks (CNNs) to improve scoring and pose ranking of protein–ligand complexes.
