@@ -12,6 +12,15 @@ GNINA
 ```
 
 
+`python train.py`
+
+```python
+print("Hello")
+```
+
+
+![Python](https://img.shields.io/badge/python-3.10-blue)
+
 ---
 
 ## Method Overview
